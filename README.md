@@ -272,7 +272,7 @@ sudo usermod -aG docker ubuntu
 # Log out and back in
 
 sudo apt-get install -y git
-git clone https://github.com/YOUR_USERNAME/sentinel.git /opt/sentinel
+git clone https://github.com/g4m3m4g/sentinel.git /opt/sentinel
 ```
 
 ### 3. Add GitHub Secrets
