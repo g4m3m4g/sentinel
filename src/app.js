@@ -2,6 +2,7 @@ require('dotenv').config();
 const express = require('express');
 const targetsRouter = require('./routes/targets');
 const statsRouter = require('./routes/stats');
+const statusRouter = require('./routes/status');
 
 const app = express();
 
@@ -27,6 +28,7 @@ app.get('/health', (req, res) => res.json({ status: 'ok', time: new Date().toISO
 
 app.use('/api/targets', targetsRouter);
 app.use('/api/stats', statsRouter);
+app.use('/status', statusRouter);
 
 // 404
 app.use((req, res) => res.status(404).json({ error: 'Not found' }));
